@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>3x3 Cubing!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<style>
+    * {
+        font-family: monaco;
+        color: #2c2c2c
+    }
+
+    h1 {
+        color: #2c2c2c;
+        background-color: #6699cc;
+        border: 2px solid #2c2c2c;
+    }
+
+    h2 {
+        color: #2c2c2c;
+        background-color: #dcdcdc;
+        border: 2px solid #2c2c2c;
+        font-size: 1.2em;
+    }
+
+    h3 {
+        color: #2c2c2c;
+        font-size: 1.2em;
+    }
+
+    .content-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        min-width: 400px
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .content-table thread tr {
+        background-color: #6699cc
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .content-table th,
+    .content-table td {
+        padding: 12px 15px
+    }
+
+    .content-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .content-table tbody tr:nth-of-type(even) {
+        background-color: #ffe4e1
+    }
+
+    .content-table tbody tr:last-of-type {
+        border-bottom: 2px solid #6699cc
+    }
+</style>
+
+<body>
+    <h1>3x3 Cubing!</h1>
+    <h2>Algorithms:
+        <a href="https://www.cubeskills.com/uploads/pdf/tutorials/f2l-algorithms-different-slot-positions.pdf">[F2L]</a>
+        <a href="https://www.cubeskills.com/uploads/pdf/tutorials/useful-f2l-algorithms.pdf">[Advanced F2L]</a>
+        <a href="https://www.cubeskills.com/uploads/pdf/tutorials/easy-vls-algorithms.pdf">[Valk Last Slot]</a>
+        <a href="https://www.cubeskills.com/uploads/pdf/tutorials/wv-algorithms.pdf">[Winter Variation]</a>
+        <a href="https://www.cubeskills.com/uploads/pdf/tutorials/oll-algorithms.pdf">[OLL]</a>
+        <a href="https://www.cubeskills.com/uploads/pdf/tutorials/coll-algorithms.pdf">[COLL]</a>
+        <a href="https://www.cubeskills.com/uploads/pdf/tutorials/pll-algorithms.pdf">[PLL]</a>
+    </h2>
+    <h3>Solves & Stats</h3>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Entry</th>
+                <th>Date</th>
+                <th>Scramble</th>
+                <th>Time</th>
+                <th>Penalty</th>
+                <th>Session Average</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            {% for item in data %}
+              <tr>
+                  <td>{{item[0]}}</td>
+                  <td>{{item[1]}}</td>
+                  <td>{{item[2]}}</td>
+                  <td>{{item[3]}}</td>
+                  <td>{{item[4]}}</td>
+                  <td>{{item[5]}}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+</body>
+</html>
